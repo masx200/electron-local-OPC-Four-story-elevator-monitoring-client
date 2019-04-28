@@ -15,4 +15,4 @@ This project needs to be run as an administrator on the windows system.
 
 run "npm install" to install node_modules
 
-run "startrunadmin.bat" to start electron
+run "npm run admin" or"startrunadmin.bat" to start electron
