@@ -37,5 +37,6 @@ rem echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
 rem	%cd%\node_modules\electron\dist\electron.exe %cd%
 		
 		%electron% %cd%
+        electron %cd%
 
 
