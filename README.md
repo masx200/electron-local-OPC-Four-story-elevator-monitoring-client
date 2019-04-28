@@ -12,7 +12,7 @@ electron-local-OPC-Four-story-elevator-monitoring-client
 这个项目需要在windows系统中，以管理员身份运行
 
 This project needs to be run as an administrator on the windows system.
-
+# install dependences
 run "npm install" to install node_modules
-
+# install dependences
 run "npm run admin" or"startrunadmin.bat" to start electron

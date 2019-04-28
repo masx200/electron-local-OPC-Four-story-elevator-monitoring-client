@@ -4,8 +4,8 @@
 	"description": "A minimal Electron application",
 	"main": "main.js",
 	"scripts": {
-        "start": "electron .",
-        "admin": "startrunadmin.bat"
+		"start": "electron .",
+		"admin": "startrunadmin.bat"
 	},
 	"repository": "https://github.com/electron/electron-quick-start",
 	"keywords": [
