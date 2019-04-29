@@ -18,5 +18,5 @@ https://electronjs.org/
 
 # install dependences
 run "npm install" to install node_modules
-# install dependences
+# run as adminstrator
 run "npm run admin" or"startrunadmin.bat" to start electron
