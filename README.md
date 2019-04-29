@@ -12,6 +12,10 @@ electron-local-OPC-Four-story-elevator-monitoring-client
 这个项目需要在windows系统中，以管理员身份运行
 
 This project needs to be run as an administrator on the windows system.
+
+# Electron | 使用 JavaScript, HTML 和 CSS 构建跨平台的桌面应用。
+https://electronjs.org/
+
 # install dependences
 run "npm install" to install node_modules
 # install dependences
