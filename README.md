@@ -20,3 +20,6 @@ https://electronjs.org/
 run "npm install" to install node_modules
 # run as adminstrator
 run "npm run admin" or"startrunadmin.bat" to start electron
+
+# run without adminstrator
+run "npm run start" to start electron
