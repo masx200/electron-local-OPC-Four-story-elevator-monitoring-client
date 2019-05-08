@@ -9,7 +9,6 @@ my停靠4层次数 = 0;
 my开门次数 = 0;
 my关门次数 = 0;
 document.getElementById("allruntime").innerText = "已启动时间:" + myallruntime / 1000 + "秒" + " 已刷新次数:" + allrefreshcishu + "次"
-//document.getElementById("shuaxinjiange").innerText = "刷新间隔:" + shuaxinjiange + "毫秒"
 
 initclick = 0
 isrunfresh = 0
@@ -222,7 +221,7 @@ function mycallback3(err, data, stderr) {
 
 
         meihangarray1 = data.split("\n")
-        //console.log(meihangarray1)
+
         if (meihangarray1.length >= 2) {
 
             usefuloutput1 = []
@@ -237,7 +236,7 @@ function mycallback3(err, data, stderr) {
 
                 }
             }
-            //console.log(usefuloutput1)
+
             if (usefuloutput1.length > 0) {
                 console.log("找到" + usefuloutput1.length + "个opc服务器", Date().split(" ").join("-"))
                 myserverlist = []
@@ -304,7 +303,7 @@ function mycallback1(err, data, stderr) {
 
 
         meihangarray1 = data.split("\n")
-        //console.log(meihangarray1)
+
         if (meihangarray1.length >= 2) {
 
             usefuloutput1 = []
@@ -319,7 +318,7 @@ function mycallback1(err, data, stderr) {
 
                 }
             }
-            //console.log(usefuloutput1)
+
             if (usefuloutput1.length > 0) {
                 console.log("找到" + usefuloutput1.length + "个opc服务器")
                 myserverlist = []
@@ -349,7 +348,7 @@ function mycallback1(err, data, stderr) {
 
                     if (document.getElementById("zdsx").checked == true) {
                         console.log("执行命令", '%cd%/console-LocalSyncWrapper.exe -d ' + myservename)
-                        // qidongtime=new Date().getTime()
+
                         cmd.get('%cd%/console-LocalSyncWrapper.exe -d ' + myservename, mycallback2);
                         console.log("是否刷新", document.getElementById("zdsx").checked, document.getElementById("tzsx").checked)
                     }
@@ -380,10 +379,10 @@ function mycallback1(err, data, stderr) {
 }
 
 function mycallback2(err, data, stderr) {
-    //  	cmdendtime=new Date().getTime()
-    // 	cmdruntime=cmdendtime-qidongtime
-    // 	console.log("cmd执行时间",cmdruntime/1000)
-    // 	qidongtime=new Date().getTime()
+
+
+
+
 
     isrunfresh = 1
     if (!err) {
@@ -391,7 +390,7 @@ function mycallback2(err, data, stderr) {
 
 
         meihangarray = data.split("\n")
-        //console.log(meihangarray)
+
         usefuloutput = []
         for (key in meihangarray) {
 
@@ -403,11 +402,11 @@ function mycallback2(err, data, stderr) {
 
             }
         }
-        //console.log(usefuloutput)
+
         if (usefuloutput.length > 0) {
 
 
-            // console.log("allrefreshcishu", allrefreshcishu)
+
             lianjiesuccess()
             document.title = "四层电梯监控-" + myservename
             zhuangtaibiao = []
@@ -423,7 +422,7 @@ function mycallback2(err, data, stderr) {
             })
 
             console.log(zhuangtaibiao)
-            //xinzhuangtai = []
+
             zhuangtaibiao.forEach(function (value) {
                 var chaifenshu = value.split("=")
 
@@ -431,158 +430,158 @@ function mycallback2(err, data, stderr) {
 
                 if (chaifenshu[0] == "x0") {
                     $("#myx0").text(chaifenshu[1]);
-                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                 } else
                     if (chaifenshu[0] == "x1") {
                         $("#myx1").text(chaifenshu[1]);
-                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                     } else
                         if (chaifenshu[0] == "x2") {
                             $("#myx2").text(chaifenshu[1]);
-                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                         } else
                             if (chaifenshu[0] == "x3") {
                                 $("#myx3").text(chaifenshu[1]);
-                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                             } else
                                 if (chaifenshu[0] == "x4") {
                                     $("#myx4").text(chaifenshu[1]);
-                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                 } else
                                     if (chaifenshu[0] == "x5") {
                                         $("#myx5").text(chaifenshu[1]);
-                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                     } else
                                         if (chaifenshu[0] == "x6") {
                                             $("#myx6").text(chaifenshu[1]);
-                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                         } else
                                             if (chaifenshu[0] == "x7") {
                                                 $("#myx7").text(chaifenshu[1]);
-                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                             } else
                                                 if (chaifenshu[0] == "x10") {
                                                     $("#myx10").text(chaifenshu[1]);
-                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                 } else
                                                     if (chaifenshu[0] == "x11") {
                                                         $("#myx11").text(chaifenshu[1]);
-                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                     } else
                                                         if (chaifenshu[0] == "x12") {
                                                             $("#myx12").text(chaifenshu[1]);
-                                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                         } else
                                                             if (chaifenshu[0] == "x13") {
                                                                 $("#myx13").text(chaifenshu[1]);
-                                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                             } else
                                                                 if (chaifenshu[0] == "x14") {
                                                                     $("#myx14").text(chaifenshu[1]);
-                                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                 } else
                                                                     if (chaifenshu[0] == "x15") {
                                                                         $("#myx15").text(chaifenshu[1]);
-                                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                     } else
                                                                         if (chaifenshu[0] == "x16") {
                                                                             $("#myx16").text(chaifenshu[1]);
-                                                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                         } else
                                                                             if (chaifenshu[0] == "x17") {
                                                                                 $("#myx17").text(chaifenshu[1]);
-                                                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                             } else
                                                                                 if (chaifenshu[0] == "y0") {
                                                                                     $("#myy0").text(chaifenshu[1]);
-                                                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                 } else
                                                                                     if (chaifenshu[0] == "y1") {
                                                                                         $("#myy1").text(chaifenshu[1]);
-                                                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                     } else
                                                                                         if (chaifenshu[0] == "y2") {
                                                                                             $("#myy2").text(chaifenshu[1]);
-                                                                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                         } else
                                                                                             if (chaifenshu[0] == "y3") {
                                                                                                 $("#myy3").text(chaifenshu[1]);
-                                                                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                             } else
                                                                                                 if (chaifenshu[0] == "y4") {
                                                                                                     $("#myy4").text(chaifenshu[1]);
-                                                                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                 } else
                                                                                                     if (chaifenshu[0] == "y5") {
                                                                                                         $("#myy5").text(chaifenshu[1]);
-                                                                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                     } else
                                                                                                         if (chaifenshu[0] == "y6") {
                                                                                                             $("#myy6").text(chaifenshu[1]);
-                                                                                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                         } else
                                                                                                             if (chaifenshu[0] == "y7") {
                                                                                                                 $("#myy7").text(chaifenshu[1]);
-                                                                                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                             } else
                                                                                                                 if (chaifenshu[0] == "y10") {
                                                                                                                     $("#myy10").text(chaifenshu[1]);
-                                                                                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                 } else
                                                                                                                     if (chaifenshu[0] == "y11") {
                                                                                                                         $("#myy11").text(chaifenshu[1]);
-                                                                                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                     } else
                                                                                                                         if (chaifenshu[0] == "y12") {
                                                                                                                             $("#myy12").text(chaifenshu[1]);
-                                                                                                                            //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                         } else
                                                                                                                             if (chaifenshu[0] == "y13") {
                                                                                                                                 $("#myy13").text(chaifenshu[1]);
-                                                                                                                                //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                             } else
                                                                                                                                 if (chaifenshu[0] == "y14") {
                                                                                                                                     $("#myy14").text(chaifenshu[1]);
-                                                                                                                                    //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                                 } else
                                                                                                                                     if (chaifenshu[0] == "y15") {
                                                                                                                                         $("#myy15").text(chaifenshu[1]);
-                                                                                                                                        //xinzhuangtai.push(chaifenshu[0], chaifenshu[1])
+
 
                                                                                                                                     }
 
 
             })
-            //console.log(xinzhuangtai)
+
             mytemphangids = ["#myx0", "#myx1", "#myx2", "#myx3", "#myx4", "#myx5", "#myx6", "#myx7", "#myx10", "#myx11",
                 "#myx12", "#myx13", "#myx14", "#myx15", "#myx16", "#myx17", "#myy0", "#myy1", "#myy2", "#myy3", "#myy4", "#myy5",
                 "#myy6", "#myy7", "#myy10", "#myy11", "#myy12", "#myy13", "#myy14", "#myy15"
