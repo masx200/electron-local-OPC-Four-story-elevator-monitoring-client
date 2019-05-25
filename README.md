@@ -4,6 +4,9 @@
 
 A minimal Electron application based on OPC-Client-console-LocalSyncWrapper
 electron-local-OPC-Four-story-elevator-monitoring-client
+
+# 新版使用bootstrap4和parcel-bundler打包
+
 # 本地四层电梯监控的gui实现,基于electron和OPC-Client-console-LocalSyncWrapper
 读取本地opc服务器上的数据并展示,包括的opc标签有如下,可用ICONICS Simulator OPC Server 3.12进行模拟
 

@@ -1,23 +1,31 @@
 {
-	"name": "electron-quick-start",
-	"version": "1.0.0",
-	"description": "A minimal Electron application",
-	"main": "main.js",
-	"scripts": {
-		"start": "electron .",
-		"admin": "startrunadmin.bat"
-	},
-	"repository": "https://github.com/electron/electron-quick-start",
-	"keywords": [
-		"Electron",
-		"quick",
-		"start",
-		"tutorial",
-		"demo"
-	],
-	"author": "GitHub",
-	"license": "CC0-1.0",
-	"devDependencies": {
-		"electron": "^5.0.0"
-	}
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "admin": "startrunadmin.bat",
+    "dev":"parcel main.js index.html  --target electron --public-url ./",
+    "build":"parcel build main.js index.html  --target electron --public-url ./"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "electron": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
 }
