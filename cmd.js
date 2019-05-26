@@ -1,4 +1,4 @@
-var exec = require('child_process').exec;
+import { exec } from 'child_process';
 
 var commandline={
     get:getString,
@@ -29,4 +29,4 @@ function getString(command,callback){
     );
 }
 
-module.exports=commandline;
+export default commandline;
