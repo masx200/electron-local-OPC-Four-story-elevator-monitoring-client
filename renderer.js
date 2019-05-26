@@ -6,9 +6,10 @@ delete window.module;
 // @import "bootstrap";
 
 // import "bootstrap/dist/css/bootstrap.css";
-import $ from "jquery";
-// import "popper.js";
-import "bootstrap";
+import $ from "./node_modules/_jquery@3.4.1@jquery/dist/jquery.min.js";
+import "./node_modules/_popper.js@1.15.0@popper.js/dist/umd/popper.min.js";
+import "./node_modules/_bootstrap@4.3.1@bootstrap/dist/js/bootstrap.min.js";
+
 import cmd from "./cmd.js";
 var meihangarray1;
 var shuaxinjiange = 50;
@@ -487,6 +488,7 @@ function mycallback1(err, data, stderr) {
 function mycallback2(err, data, stderr) {
   var meihangarray, usefuloutput, zhuangtaibiao, jiequkai, jiequend, mytiqu;
   isrunfresh = 1;
+  var diantidata = {};
   if (!err) {
     meihangarray = data.split("\n");
 
@@ -511,11 +513,13 @@ function mycallback2(err, data, stderr) {
         zhuangtaibiao.push(mytiqu);
       });
 
-      console.log(zhuangtaibiao);
+      //   console.log(zhuangtaibiao);
 
       zhuangtaibiao.forEach(function(value) {
         var chaifenshu = value.split("=");
-
+        diantidata[chaifenshu[0]] = chaifenshu[1];
+        $("#my"+chaifenshu[0]).text(chaifenshu[1]);
+/* 
         if (chaifenshu[0] == "x0") {
           $("#myx0").text(chaifenshu[1]);
         } else if (chaifenshu[0] == "x1") {
@@ -576,9 +580,10 @@ function mycallback2(err, data, stderr) {
           $("#myy14").text(chaifenshu[1]);
         } else if (chaifenshu[0] == "y15") {
           $("#myy15").text(chaifenshu[1]);
-        }
+        } */
       });
-
+      console.log((diantidata));
+    //   JSON.stringify(temp1)
       var mytemphangids = [
         "#myx0",
         "#myx1",
