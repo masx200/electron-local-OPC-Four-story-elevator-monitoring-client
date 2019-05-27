@@ -6,8 +6,8 @@
   "scripts": {
     "start": "electron .",
     "admin": "startrunadmin.bat",
-    "dev": "parcel main.js index.html  --target electron --public-url ./",
-    "build": "parcel build main.js index.html  --target electron --public-url ./"
+    "dev": "parcel main.js index.html  --target electron --public-url ./ --out-dir ../dist/",
+    "build": "parcel build main.js index.html  --target electron --public-url ./ --out-dir ../dist/"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
