@@ -5,7 +5,9 @@
 A minimal Electron application based on OPC-Client-console-LocalSyncWrapper
 electron-local-OPC-Four-story-elevator-monitoring-client
 
-# 新版使用bootstrap4和parcel-bundler打包
+# 新版使用electron-builder和webpack打包
+
+## 旧版使用bootstrap4和parcel-bundler打包
 
 npm i -g parcel-bundler
 <img  src="bootstrap4版四层电梯.png" >
@@ -28,3 +30,27 @@ run "npm run admin" or"startrunadmin.bat" to start electron
 
 # run without adminstrator
 run "npm run start" to start electron
+
+
+# electron-webpack-quick-start
+> A bare minimum project structure to get started developing with [`electron-webpack`](https://github.com/electron-userland/electron-webpack).
+## Getting Started
+Simply clone down this repository, install dependencies, and get started on your application.
+
+The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** recommended, as opposed to using `npm`.
+
+### Development Scripts
+
+```bash
+# run application in development mode
+yarn dev
+
+# compile source code and create webpack output
+yarn compile
+
+# `yarn compile` & create build with electron-builder
+yarn dist
+
+# `yarn compile` & create unpacked build with electron-builder
+yarn dist:dir
+```
