@@ -19,8 +19,8 @@ if '%errorlevel%' NEQ '0' (
   
 :UACPrompt  
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"  
-   echo UAC.ShellExecute "%~s0", "", "", "runas", 0 >> "%temp%\getadmin.vbs"  
-REM  echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"  
+REM    echo UAC.ShellExecute "%~s0", "", "", "runas", 0 >> "%temp%\getadmin.vbs"  
+ echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"  
     "%temp%\getadmin.vbs"  
     exit /B  
 REM   :NO_electron
@@ -37,6 +37,7 @@ REM   exit /B
 rem	%cd%\node_modules\electron\dist\electron.exe %cd%
 		
 		REM %electron% %cd%
-        electron %cd%
+        REM electron %cd%
+        yarn run dev
 
 
