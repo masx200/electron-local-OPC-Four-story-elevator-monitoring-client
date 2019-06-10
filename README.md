@@ -5,7 +5,9 @@
 A minimal Electron application based on OPC-Client-console-LocalSyncWrapper
 electron-local-OPC-Four-story-elevator-monitoring-client
 
-# 新版使用bootstrap4和parcel-bundler打包
+# 新版使用electron-builder和webpack打包
+
+## 旧版使用bootstrap4和parcel-bundler打包
 
 npm i -g parcel-bundler
 <img  src="bootstrap4版四层电梯.png" >
