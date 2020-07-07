@@ -726,4 +726,4 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
       },
     }).$mount("#app");
 })();
-window.nodeRequire = window.require;
+//window.nodeRequire = window.require;
