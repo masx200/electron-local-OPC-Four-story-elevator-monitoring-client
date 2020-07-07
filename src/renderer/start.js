@@ -25,7 +25,7 @@ export default function start(){
             "次";
           var initclick = 0;
           var isrunfresh = 0;
-          onload = chushihuachazhaofwq;
+       window.   onload = chushihuachazhaofwq;
           $("#up1").click(function () {
             if (
               typeof myservename != "undefined" &&
