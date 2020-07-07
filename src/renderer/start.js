@@ -1,6 +1,6 @@
 import $ from "jquery/dist/jquery.min";
 import cmd from "./cmd.js";
-import pathToAsset1  from './index.js'
+import pathToAsset1  from './pathToAsset1.js'
 export default function start(){
 
  (() => {
