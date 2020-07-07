@@ -1,36 +1,13 @@
-// Initial welcome page. Delete the following line to remove it.
 "use strict";
-
 import "./renderer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import $ from "jquery/dist/jquery.min";
 import "popper.js/dist/esm/popper.min";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
 import cmd from "./cmd.js";
-// import consoleLocalSyncWrapper from "./console-LocalSyncWrapper.exe";
-// console.log(consoleLocalSyncWrapper);
-/* const vueScript = document.createElement("script");
-vueScript.setAttribute("type", "text/javascript"),
-  vueScript.setAttribute("src", "https://unpkg.com/vue"),
-  (vueScript.onload = init),
-  document.head.appendChild(vueScript);
- */
-
-// import devtools from "@vue/devtools";
 import Vue from "vue/dist/vue.esm.browser.min";
-
-// import fs from "fs";
 import path from "path";
-
 const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
-// console.log(__static)
-// console.log(pathToAsset);
-// init();
-// if (process.env.NODE_ENV === "development") {
-//   devtools.connect(/* host, port */);
-// }
 (function init() {
   (Vue.config.devtools = false),
     (Vue.config.productionTip = false),
@@ -566,23 +543,16 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
             " 已刷新次数:" +
             allrefreshcishu +
             "次";
-
           var initclick = 0;
           var isrunfresh = 0;
-          // cmd = nodeRequire("./cmd.js");
           onload = chushihuachazhaofwq;
-          $("#up1").click(function() {
+          $("#up1").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改运行电机状态为上",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改运行电机状态为上", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -605,18 +575,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-          $("#down1").click(function() {
+          $("#down1").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改运行电机状态为下",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改运行电机状态为下", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -639,18 +604,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-          $("#stop1").click(function() {
+          $("#stop1").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改运行电机状态为停",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改运行电机状态为停", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -673,18 +633,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-          $("#on2").click(function() {
+          $("#on2").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改门电机状态为开",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改门电机状态为开", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -707,18 +662,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-          $("#off2").click(function() {
+          $("#off2").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改门电机状态为关",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改门电机状态为关", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -741,18 +691,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-          $("#stop2").click(function() {
+          $("#stop2").click(function () {
             if (
               typeof myservename != "undefined" &&
               document.getElementById("zdsx").checked == true &&
               document.getElementById("connect").innerText == "断开"
             ) {
-              console.log(
-                "修改门电机状态为停",
-                Date()
-                  .split(" ")
-                  .join("-")
-              );
+              console.log("修改门电机状态为停", Date().split(" ").join("-"));
               var mycommand =
                 pathToAsset1 +
                 " -w " +
@@ -775,7 +720,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log(tanchu);
             }
           });
-
           function mycallbacktongyong(err, data, stderr) {
             if (!err) {
               var meihangarray1 = data.split("\n");
@@ -786,12 +730,7 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
           }
           document.getElementById("zdsx").onchange = document.getElementById(
             "tzsx"
-          ).onchange = function() {
-            // console.log(
-            //   "是否刷新",
-            //   document.getElementById("zdsx").checked,
-            //   document.getElementById("tzsx").checked
-            // );
+          ).onchange = function () {
             if (!isrunfresh) {
               if (initclick) {
                 if (document.getElementById("connect").innerText == "断开") {
@@ -809,9 +748,7 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     console.log(
                       "开始连接服务器",
                       myservename,
-                      Date()
-                        .split(" ")
-                        .join("-")
+                      Date().split(" ").join("-")
                     );
                     myrefresh(myservename);
                   } else {
@@ -823,13 +760,13 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               }
             }
           };
-          $("#zizd").click(function() {
+          $("#zizd").click(function () {
             document.getElementById("zdsx").click();
           });
-          $("#zitz").click(function() {
+          $("#zitz").click(function () {
             document.getElementById("tzsx").click();
           });
-          $("#connect").click(function() {
+          $("#connect").click(function () {
             allrefreshcishu = 0;
             myallruntime = 0;
             my空闲时间次数 = 0;
@@ -843,7 +780,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
             if (document.getElementById("connect").innerText == "连接") {
               document.getElementById("connect").innerText = "断开";
               initclick = 1;
-
               myservename = $("#server").val();
               if (myservename) {
                 console.log("开始连接服务器", myservename);
@@ -875,38 +811,26 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 "次";
             }
           });
-
           function chushihuachazhaofwq() {
-            console.log(
-              "初始化查找服务器",
-              Date()
-                .split(" ")
-                .join("-")
-            );
+            console.log("初始化查找服务器", Date().split(" ").join("-"));
             console.log("执行命令", pathToAsset1 + " -l");
             cmd.get(pathToAsset1 + " -l ", mycallback3);
           }
-
           function mycallback3(err, data, stderr) {
             var mykaishi, myserverlist, myjiewei;
             if (!err) {
               meihangarray1 = data.split("\n");
-
               if (meihangarray1.length >= 2) {
                 usefuloutput1 = [];
-
                 for (var key in meihangarray1) {
                   if ((mykaishi = meihangarray1[key].indexOf("ProgID:")) >= 0) {
                     usefuloutput1.push(meihangarray1[key]);
                   }
                 }
-
                 if (usefuloutput1.length > 0) {
                   console.log(
                     "找到" + usefuloutput1.length + "个opc服务器",
-                    Date()
-                      .split(" ")
-                      .join("-")
+                    Date().split(" ").join("-")
                   );
                   myserverlist = [];
                   for (key in usefuloutput1) {
@@ -922,15 +846,14 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     }
                   }
                   console.log(myserverlist);
-                  myserverlist.forEach(function(currentValue, index) {
+                  myserverlist.forEach(function (currentValue, index) {
                     var fuwuqianniu = [];
                     fuwuqianniu[index] = $("<a></a>").text(currentValue);
                     $("#xialiacaidan").append(
                       $("<li></li>").append(fuwuqianniu[index])
                     );
-
                     console.log("下拉菜单添加项目", currentValue);
-                    fuwuqianniu[index].click(function() {
+                    fuwuqianniu[index].click(function () {
                       $("#server").val(currentValue);
                     });
                   });
@@ -946,26 +869,21 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log("error", err);
             }
           }
-
           function myrefresh(myservename) {
             console.log("执行命令", pathToAsset1 + " -l");
             cmd.get(pathToAsset1 + " -l ", mycallback1);
           }
-
           function mycallback1(err, data, stderr) {
             var mykaishi, myserverlist, myjiewei, lasttime;
             if (!err) {
               meihangarray1 = data.split("\n");
-
               if (meihangarray1.length >= 2) {
                 usefuloutput1 = [];
-
                 for (var key in meihangarray1) {
                   if ((mykaishi = meihangarray1[key].indexOf("ProgID:")) >= 0) {
                     usefuloutput1.push(meihangarray1[key]);
                   }
                 }
-
                 if (usefuloutput1.length > 0) {
                   console.log("找到" + usefuloutput1.length + "个opc服务器");
                   myserverlist = [];
@@ -979,12 +897,10 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     }
                   }
                   console.log(myserverlist);
-
                   function checkAdult(age) {
                     return age == myservename;
                   }
                   var chazhaofuwuqi = myserverlist.filter(checkAdult);
-                  //   console.log(chazhaofuwuqi);
                   lasttime = new Date().getTime();
                   myallruntime = lasttime - strt;
                   document.getElementById("allruntime").innerText =
@@ -999,23 +915,14 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                       "成功找到指定的服务器",
                       "从指定的服务器刷新数据",
                       myservename,
-                      Date()
-                        .split(" ")
-                        .join("-")
+                      Date().split(" ").join("-")
                     );
-
                     if (document.getElementById("zdsx").checked == true) {
                       console.log(
                         "执行命令",
                         pathToAsset1 + " -d " + myservename
                       );
-
                       cmd.get(pathToAsset1 + " -d " + myservename, mycallback2);
-                      //   console.log(
-                      //     "是否刷新",
-                      //     document.getElementById("zdsx").checked,
-                      //     document.getElementById("tzsx").checked
-                      //   );
                     }
                   } else {
                     console.log("未找到指定的服务器", myservename);
@@ -1035,7 +942,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               console.log("error", err);
             }
           }
-
           function mycallback2(err, data, stderr) {
             var meihangarray,
               usefuloutput,
@@ -1047,99 +953,30 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
             var diantidata = {};
             if (!err) {
               meihangarray = data.split("\n");
-
               usefuloutput = [];
               for (var key in meihangarray) {
                 if (meihangarray[key].indexOf("read-uint-") >= 0) {
                   usefuloutput.push(meihangarray[key]);
                 }
               }
-
               if (usefuloutput.length > 0) {
                 lianjiesuccess();
                 document.title = "四层电梯监控-" + myservename;
                 zhuangtaibiao = [];
-                usefuloutput.forEach(function(value, index, arr) {
+                usefuloutput.forEach(function (value, index, arr) {
                   jiequkai =
                     value.indexOf("read-uint-Channel1.Device1.") +
                     "read-uint-Channel1.Device1.".length;
                   jiequend = value.indexOf("-read-finish");
                   mytiqu = value.slice(jiequkai, jiequend);
-
                   zhuangtaibiao.push(mytiqu);
                 });
-
-                //   console.log(zhuangtaibiao);
-
-                zhuangtaibiao.forEach(function(value) {
+                zhuangtaibiao.forEach(function (value) {
                   var chaifenshu = value.split("=");
                   diantidata[chaifenshu[0]] = chaifenshu[1];
                   $("#my" + chaifenshu[0]).text(chaifenshu[1]);
-                  /* 
-                      if (chaifenshu[0] == "x0") {
-                        $("#myx0").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x1") {
-                        $("#myx1").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x2") {
-                        $("#myx2").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x3") {
-                        $("#myx3").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x4") {
-                        $("#myx4").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x5") {
-                        $("#myx5").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x6") {
-                        $("#myx6").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x7") {
-                        $("#myx7").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x10") {
-                        $("#myx10").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x11") {
-                        $("#myx11").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x12") {
-                        $("#myx12").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x13") {
-                        $("#myx13").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x14") {
-                        $("#myx14").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x15") {
-                        $("#myx15").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x16") {
-                        $("#myx16").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "x17") {
-                        $("#myx17").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y0") {
-                        $("#myy0").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y1") {
-                        $("#myy1").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y2") {
-                        $("#myy2").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y3") {
-                        $("#myy3").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y4") {
-                        $("#myy4").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y5") {
-                        $("#myy5").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y6") {
-                        $("#myy6").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y7") {
-                        $("#myy7").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y10") {
-                        $("#myy10").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y11") {
-                        $("#myy11").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y12") {
-                        $("#myy12").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y13") {
-                        $("#myy13").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y14") {
-                        $("#myy14").text(chaifenshu[1]);
-                      } else if (chaifenshu[0] == "y15") {
-                        $("#myy15").text(chaifenshu[1]);
-                      } */
                 });
                 console.log(diantidata);
-                //   JSON.stringify(temp1)
                 var mytemphangids = [
                   "#myx0",
                   "#myx1",
@@ -1170,10 +1007,9 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                   "#myy12",
                   "#myy13",
                   "#myy14",
-                  "#myy15"
+                  "#myy15",
                 ];
-                /* bootstrap4的表格class不一样,success改成table-success */
-                mytemphangids.forEach(function(val) {
+                mytemphangids.forEach(function (val) {
                   if ($(val).text() == "1" || $(val).text() != "0") {
                     $(val).text("1");
                     $(val)
@@ -1187,7 +1023,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                       .removeClass("table-success");
                   }
                 });
-
                 if ($("#myx12").text() == "1") {
                   $("#myz1").text("1");
                 } else if ($("#myx13").text() == "1") {
@@ -1199,7 +1034,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 } else {
                   $("#myz1").text("中");
                 }
-
                 if ($("#myz1").text() == "中") {
                   $("#myz1")
                     .parent()
@@ -1211,7 +1045,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     .addClass("table-success")
                     .removeClass("table-warning");
                 }
-
                 if ($("#myx16").text() == "1") {
                   $("#myz2").text("开");
                 } else if ($("#myx15").text() == "1") {
@@ -1219,7 +1052,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 } else {
                   $("#myz2").text("中");
                 }
-
                 if ($("#myz2").text() == "中") {
                   $("#myz2")
                     .parent()
@@ -1231,7 +1063,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     .addClass("table-success")
                     .removeClass("table-warning");
                 }
-
                 if ($("#myy12").text() == "1") {
                   $("#myz3").text("上");
                 } else if ($("#myy13").text() == "1") {
@@ -1239,7 +1070,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 } else {
                   $("#myz3").text("停");
                 }
-
                 if ($("#myz3").text() == "停") {
                   $("#myz3")
                     .parent()
@@ -1251,7 +1081,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     .addClass("table-success")
                     .removeClass("table-warning");
                 }
-
                 if ($("#myy14").text() == "1") {
                   $("#myz4").text("开");
                 } else if ($("#myy15").text() == "1") {
@@ -1259,7 +1088,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 } else {
                   $("#myz4").text("停");
                 }
-
                 if ($("#myz4").text() == "停") {
                   $("#myz4")
                     .parent()
@@ -1271,9 +1099,7 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     .addClass("table-success")
                     .removeClass("table-warning");
                 }
-
                 allrefreshcishu++;
-
                 var lasttime = new Date().getTime();
                 myallruntime = lasttime - strt;
                 document.getElementById("allruntime").innerText =
@@ -1283,7 +1109,6 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                   " 已刷新次数:" +
                   allrefreshcishu +
                   "次";
-
                 if (
                   $("#myy14").text() == "0" &&
                   $("#myy15").text() == "0" &&
@@ -1292,20 +1117,17 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                 ) {
                   my空闲时间次数++;
                 }
-
                 $("#myfreetime").text(
                   Math.round((my空闲时间次数 / allrefreshcishu) * 100 * 100) /
                     100 +
                     "%"
                 );
-
                 $("#mybusytime").text(
                   100 -
                     Math.round((my空闲时间次数 / allrefreshcishu) * 100 * 100) /
                       100 +
                     "%"
                 );
-
                 if ($("#myy12").text() == "0" && $("#myy13").text() == "0") {
                   if ($("#myx12").text() == "1") {
                     my停靠1层次数++;
@@ -1355,30 +1177,18 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
               }
             } else {
               console.log("error", err);
-
               alert("连接服务器失败");
               document.getElementById("connect").click();
-
               lianjiefailure();
             }
-            var shuaxin = function() {
-              setTimeout(function() {
+            var shuaxin = function () {
+              setTimeout(function () {
                 if (
                   document.getElementById("zdsx").checked == true &&
                   document.getElementById("connect").innerText == "断开"
                 ) {
-                  //   console.log(
-                  //     "是否刷新",
-                  //     document.getElementById("zdsx").checked,
-                  //     document.getElementById("tzsx").checked
-                  //   );
-                  console.log(
-                    "自动刷新",
-                    Date()
-                      .split(" ")
-                      .join("-")
-                  );
-                  setTimeout(function() {
+                  console.log("自动刷新", Date().split(" ").join("-"));
+                  setTimeout(function () {
                     console.log(
                       "执行命令",
                       pathToAsset1 + " -d " + myservename
@@ -1386,17 +1196,7 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
                     cmd.get(pathToAsset1 + " -d " + myservename, mycallback2);
                   }, shuaxinjiange);
                 } else {
-                  //   console.log(
-                  //     "是否刷新",
-                  //     document.getElementById("zdsx").checked,
-                  //     document.getElementById("tzsx").checked
-                  //   );
-                  console.log(
-                    "停止刷新",
-                    Date()
-                      .split(" ")
-                      .join("-")
-                  );
+                  console.log("停止刷新", Date().split(" ").join("-"));
                   isrunfresh = 0;
                   lianjiesuccess("断开成功");
                   myallruntime = 0;
@@ -1420,20 +1220,16 @@ const pathToAsset1 = path.join(__static, "/console-LocalSyncWrapper.exe");
             };
             shuaxin();
           }
-
           function lianjiesuccess(ymrktext = "连接成功") {
             $("#connectstatus").text(ymrktext);
             $("#connectstatus").attr("style", "color:green");
           }
-
           function lianjiefailure(mytext = "连接失败") {
             $("#connectstatus").text(mytext);
             $("#connectstatus").attr("style", "color:red");
           }
         })();
-      }
+      },
     }).$mount("#app");
 })();
-
 window.nodeRequire = window.require;
-// delete window.require;
