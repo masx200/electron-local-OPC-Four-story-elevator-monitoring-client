@@ -1,4 +1,4 @@
- export default `
+export default `
       
  <div id="app">
   <div class="container-fluid">
@@ -471,4 +471,4 @@
     </div>
   </div>
 </div>
-`
+`;

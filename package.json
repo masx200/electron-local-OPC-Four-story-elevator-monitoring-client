@@ -5,6 +5,7 @@
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
     "license": "MIT",
     "scripts": {
+        "prettier": "npx prettier --write src/**/*.js *.md *.json",
         "start": "startrunadmin-dev.bat",
         "dev": "electron-webpack dev",
         "compile": "electron-webpack",
